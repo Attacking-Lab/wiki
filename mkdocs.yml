@@ -1,0 +1,116 @@
+site_name: Attacking-Lab Wiki
+repo_url: https://github.com/attacking-lab/wiki
+site_url: https://wiki.attacking-lab.com
+theme:
+  font:
+    text: Roboto
+    code: Roboto Mono
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  palette:
+    scheme: slate
+    primary: black
+    secondary: #bb86fc
+  features:
+    - navigation.expand
+    - navigation.instant
+  custom_dir: overrides
+  icon:
+    annotation: material/circle-medium
+nav:
+  - Welcome: index.md
+  - Attack-Defense CTFs:
+    - Introduction: attack-defense/index.md
+    - Timeline: attack-defense/timeline.md
+    - Playing A/D:
+      - Introduction: attack-defense/playing/index.md
+      - Strategy: attack-defense/playing/strategy.md
+      - Monitoring: attack-defense/playing/monitoring.md
+      - Exploiting: attack-defense/playing/exploiting.md
+      - Defending: attack-defense/playing/defending.md
+    - Hosting A/D:
+      - Introduction: attack-defense/hosting/index.md
+      - Routing: attack-defense/hosting/routing.md
+      - Monitoring: attack-defense/hosting/monitoring.md
+    - Service Design:
+      - Introduction: attack-defense/service-design/index.md
+      - Tenets: attack-defense/service-design/tenets.md
+      - Pitfalls: attack-defense/service-design/pitfalls.md
+    - Game Design:
+      - Attack Info: attack-defense/game-design/attack-info.md
+      - Recovery Period: attack-defense/game-design/recovery-period.md
+      - Checker Hold: attack-defense/game-design/checker-hold.md
+    - Scoring Formula:
+      - Introduction: attack-defense/scoring/index.md
+      - Tenets: attack-defense/scoring/tenets.md
+      - FaustCTF 2024: attack-defense/scoring/faust2024.md
+      - SaarCTF 2024: attack-defense/scoring/saarctf2024.md
+      - ENOWARS 2024: attack-defense/scoring/enowars2024.md
+      - ECSC 2023: attack-defense/scoring/ecsc2023.md
+      - ECSC 2024: attack-defense/scoring/ecsc2024.md
+      - ECSC 2025: attack-defense/scoring/ecsc2025.md
+      - ATKLAB v1: attack-defense/scoring/atklabv1.md
+      - ATKLAB v2: attack-defense/scoring/atklabv2.md
+      - Aggregated: attack-defense/scoring/aggregated.md
+    - Cursed Tactics:
+      - Disclaimer: attack-defense/cursed/index.md
+      - Flag Teams: attack-defense/cursed/flagteams.md
+      - Flag Exchange: attack-defense/cursed/flagexchange.md
+      - Team Inflation: attack-defense/cursed/teaminflation.md
+      - Traffic Mirroring: attack-defense/cursed/mirroring.md
+  - Hosted Events:
+    - CWTE 2025 A/D: events/cwte2025.md
+    - ECSC 2025 A/D: events/ecsc2025.md
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
+plugins:
+  - search
+  - charts
+  - git-latest-changes:
+      limit_to_docs_dir: True
+      repo_vendor: gitea
+      enabled_on_serve: True
+      history_limit: 20
+      timestamp_format: "%Y-%m-%d %H:%M"
+      table_features:
+        - "page_path_link"
+        - "timestamp"
+        - "author"
+        - "message"
+  - macros
+  - glightbox:
+      manual: true
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
+extra:
+  generator: false
+  homepage: https://attacking-lab.com
+extra_css:
+  - assets/style.css
+validation:
+  links:
+    absolute_links: relative_to_docs
