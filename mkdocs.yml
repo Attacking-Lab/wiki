@@ -39,6 +39,7 @@ nav:
       - Pitfalls: attack-defense/service-design/pitfalls.md
     - Game Design:
       - Attack Info: attack-defense/game-design/attack-info.md
+      - Validity Period: attack-defense/game-design/validity-period.md
       - Recovery Period: attack-defense/game-design/recovery-period.md
       - Checker Hold: attack-defense/game-design/checker-hold.md
     - Scoring Formula:
@@ -52,13 +53,12 @@ nav:
       - ECSC 2025: attack-defense/scoring/ecsc2025.md
       - ATKLAB v1: attack-defense/scoring/atklabv1.md
       - ATKLAB v2: attack-defense/scoring/atklabv2.md
-      - Aggregated: attack-defense/scoring/aggregated.md
     - Cursed Tactics:
       - Disclaimer: attack-defense/cursed/index.md
-      - Flag Teams: attack-defense/cursed/flagteams.md
-      - Flag Exchange: attack-defense/cursed/flagexchange.md
-      - Team Inflation: attack-defense/cursed/teaminflation.md
-      - Traffic Mirroring: attack-defense/cursed/mirroring.md
+      - Flag Farming: attack-defense/cursed/flag-farming.md
+      - Flag Exchange: attack-defense/cursed/flag-exchange.md
+      - Team Inflation: attack-defense/cursed/team-inflation.md
+      - Traffic Mirroring: attack-defense/cursed/traffic-mirroring.md
   - Hosted Events:
     - CWTE 2025 A/D: events/cwte2025.md
     - ECSC 2025 A/D: events/ecsc2025.md

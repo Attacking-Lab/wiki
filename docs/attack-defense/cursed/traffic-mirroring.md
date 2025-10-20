@@ -19,4 +19,4 @@ their ranking in the final scoreboard.
 Since the team receiving the mirrored traffic typically notices this quickly
 and it is easily verifiable by inspecting network traffic, <span class=hltext>
 the easiest way to prevent this behavior is through a policy ban</span>.
-Often it is already covered by the provision, that flag sharing is not allowed.
+Often it is already covered by the provision that flag sharing is not allowed.
