@@ -12,15 +12,15 @@ organized by [ENOFLAG](https://enoflag.de).
 
 ## Summary
 
-The total score of each team is calculated from offense, defense and sla components of every team for each of their services and rounds played.
+The total score of each team is calculated from offense, defense, and SLA components of every team for each of their services and rounds played.
 
 The checker returns one of three results for each service:
-`up`, `recovering` and `down`. The result is `up` if all SLA checks pass, and
+`up`, `recovering`, and `down`. The result is `up` if all SLA checks pass, and
 `down` if some SLA checks do not pass. A service is considered
 `recovering` if flags for one round in the *retention period* could not be
 recovered, but the latest round passed SLA checks.
 
-The following python pseudo-code captures the [team score calculation](https://github.com/enowars/EnoEngine/blob/66310c0/EnoDatabase/EnoDb.Scoring.cs):[^1]
+The following Python pseudo-code captures the [team score calculation](https://github.com/enowars/EnoEngine/blob/66310c0/EnoDatabase/EnoDb.Scoring.cs):[^1]
 
 
 ``` python3
@@ -66,7 +66,7 @@ def score(rounds: list[RoundState], owner: dict[str, str],
     return (attack, defense, sla)
 ```
 
-[^1]: We've removed the per-service weights applied to attack, defense and SLA points from the formula, since historically they we're rarely changed and typically set to 1.
+[^1]: We've removed the per-service weights applied to attack, defense, and SLA points from the formula since historically they were rarely changed and typically set to 1.
 
 ## Review
 

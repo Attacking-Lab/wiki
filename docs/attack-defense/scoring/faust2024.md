@@ -10,16 +10,16 @@ Scoring formula for [FaustCTF 2024](https://2024.faustctf.net/) organized by
 
 ## Summary
 
-The total score of each team is calculated from `offense`, `defense` and `sla`
+The total score of each team is calculated from `offense`, `defense`, and `sla`
 components of every team for each of their services and rounds played.
 
 The checker returns one of three results for each service:
-`up`, `recovering` and `down`. The result is `up` if all SLA checks pass, and
+`up`, `recovering`, and `down`. The result is `up` if all SLA checks pass, and
 `down` if some SLA checks do not pass. A service is considered
 `recovering` if flags for one round in the *retention period* could not be
 recovered, but the latest round passed SLA checks.
 
-The following python pseudo-code captures the [team score calculation](https://github.com/fausecteam/ctf-gameserver/blob/7d031ba/src/ctf_gameserver/controller/scoring.py):
+The following Python pseudo-code captures the [team score calculation](https://github.com/fausecteam/ctf-gameserver/blob/7d031ba/src/ctf_gameserver/controller/scoring.py):
 
 ``` python3
 type CheckerResult = Literal["up"] | Literal["recovering"] | Literal["down"]
@@ -69,8 +69,8 @@ def score(rounds: list[RoundState], owner: dict[str, str],
   Additionally, score recalculation may cause total attack points to
   decrease from one round to the next, which tends to confuse new players.
 - In the worst-case, when all teams capture flags of a service, the defense
-  points $(N_\texttt{Teams} - 1)^{0.75}$ lost outweigh the SLA points
-  $(N_\texttt{Teams})^{0.5}$ gained for that service, thus violating
+  points `(N_Teams - 1)^0.75` lost outweigh the SLA points
+  `(N_Teams)^0.5` gained for that service, thus violating
   [Tenet 4](../tenets/#perfect_sla_must_be_worth_more_than_any_attackers_relative_gain)
 
 

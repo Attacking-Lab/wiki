@@ -5,8 +5,8 @@ necessary for exploiting a flagstore without causing excessive network
 or service load.</span>
 
 Attack info is made available for the round following the one in which the
-flags are deployed, typically through an API. Below we have documented
-some of the common API interfaces.
+flags are deployed, typically through an API. Below are some
+of the common API interfaces.
 
 ## FAUST CTF 2024
 

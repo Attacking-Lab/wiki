@@ -10,7 +10,7 @@ Scoring formula for [SaarCTF 2024](https://ctf.saarland/) organized by
 
 ## Summary
 
-The total score of each team is calculated from `offense`, `defense` and `sla`
+The total score of each team is calculated from `offense`, `defense`, and `sla`
 components of every team for each of their services and rounds played.
 
 The checker returns one of three results for each service:
@@ -20,7 +20,7 @@ The checker returns one of three results for each service:
 Additionally, the game server tracks the status of the vulnbox' VPN
 connection as, assigning either `online` or `offline` status accordingly.
 
-The following python pseudo-code captures the [team score calculation](https://github.com/MarkusBauer/saarctf-gameserver/blob/2ae48d1/controlserver/scoring/algorithm.py#L54):
+The following Python pseudo-code captures the [team score calculation](https://github.com/MarkusBauer/saarctf-gameserver/blob/2ae48d1/controlserver/scoring/algorithm.py#L54):
 
 ``` python3
 type CheckerResult = Literal["up"] | Literal["down"]
@@ -65,24 +65,24 @@ def score(rounds: list[RoundState], owner: dict[str, str],
 ```
 
 The final worth of a flag is only calculated once its validity is over.
-That means, everyone that submits a flag while it is still valid receives
+That means everyone who submits a flag while it is still valid receives
 the same amount of points.
 
 
 ## Review
 
 - Only small differences to the [FaustCTF 2024](faust2024) scoring formula,
-  inherits most of the same strengths (simple, easy to implement) and
+  it inherits most of the same strengths (simple, easy to implement) and
   weaknesses (score recalculation).
 - SLA is scaled using the number of *online* teams, which allows manipulation
-  by registering fake teams ahead of time and connecting / disconnecting
+  by registering fake teams ahead of time and connecting/disconnecting
   from the VPN depending on your own service status.
 - Attack and defense points are scaled by the number of flagstores, but SLA
   is not scaled by the number of services. For consistent scoring, SLA
   should be normalized such that SLA weight does not depend on the number
-  services deployed.
+  of services deployed.
 - Defense points scale with SLA, such that perfect SLA will always be worth
-  atleast as much as the defense points lost. However, since the *attacker*
+  at least as much as the defense points lost. However, since the *attacker*
   still gains points when in the worst-case `sla + defense == 0`, this formula
   violates [Tenet 4](../tenets/#perfect_sla_must_be_worth_more_than_any_attackers_relative_gain).
 

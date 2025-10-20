@@ -16,16 +16,16 @@ aggregated = [s1 + s2 * w for s1,s2 in zip(jeopardy, attackdefense)]
 
 This has some obvious drawbacks. Most notably, the first few teams in an
 Attack-Defense CTF with "classic" scoring typically have significantly more
-points than the rest, unlike in Jeopardy. Also, when SLA is valued highly by
-the scoring formula, this pratically constant score added to each team devalues
-the Jeopardy challenges when merging.
+points than the rest, this is less so in Jeopardy. Also, when SLA is valued
+highly by the scoring formula, this practically constant score added to each
+team devalues the Jeopardy challenges when merging.
 
 This was the motivation for developing [ATKLABv2](atklabv2.md), which can be
-used with the Jeopardy scoring fomula to dynamically weight the Attack-Defense
+used with the Jeopardy scoring formula to dynamically weight the Attack-Defense
 *challenges*, ideally mapping skill to points in the same way.
 
 Another benefit of [ATKLABv2](atklabv2.md) is that the final NOP team score
-can be used as a baseline measure for points which did not require any effort
+can be used as a baseline measure for points that did not require any effort
 by teams to be earned, since it can neither gain points from attack nor defense.
 
 Thus, this score can be removed from each team's attack-defense score before

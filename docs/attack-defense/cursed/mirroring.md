@@ -2,7 +2,7 @@
 
 <span class=hltext>Traffic mirroring is a technique in which a team mirrors
 traffic from their own service to another team, which has patched the service
-and ranks lower than them.</span>
+and ranks lower than they are.</span>
 
 This way, the mirroring team benefits from the gain of positive (or absence
 of negative) defense points, while being able to focus their efforts on

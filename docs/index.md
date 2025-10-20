@@ -16,8 +16,8 @@ Learning from our own experiences [playing](/attack-defense/playing/index.md)
 and [organizing](/attack-defense/hosting/index.md) A/D CTFs, we:
 
 1. value high reliability, performant infrastructure and extensive monitoring
-2. treat all teams equally, indpendent of their players and personal connections
+2. treat all teams equally, independent of their players and personal connections
 3. build problems that actually test practical knowledge and problem-solving
-4. implement enforcable rules and react quickly to misconduct
+4. implement enforceable rules and react quickly to misconduct
 
 Our tooling is generally [open-source](https://github.com/attacking-lab).

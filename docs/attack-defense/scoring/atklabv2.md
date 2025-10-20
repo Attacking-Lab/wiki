@@ -47,7 +47,7 @@ real CTF data using <a href="https://github.com/attacking-lab/scoring-playground
 
 ### Dynamic Scoring
 
-We deterime a flexible dynamic scoring formula, which allows the organizers
+We determine a flexible dynamic scoring formula, which allows the organizers
 to set three fixed points `(1, max_score)`, `(fp_ratio * teams, fp_weight)`
 and `(teams, min_score)`.
 
@@ -121,8 +121,8 @@ def attack_flag(num_submissions: int, teams: int):
 
 Additional ATK points are awarded to each attacking team based on the DEF points
 that other teams earn from defending against their attacks. This prevents
-scenarios where defenders gain more DEF points from an attack than the attacker -
-in other words, failed exploit attempts do not negatively affect the attacker ranking.
+scenarios where defenders gain more DEF points from an attack than the attacker—in
+other words, failed exploit attempts do not negatively affect the attacker ranking.
 
 ```python3
 def attack(live_round: int, flag_round: int,
@@ -354,9 +354,9 @@ Second, the edge cases where the defenders are getting more points are:
    being able copy it from network behavior of another team), which is
    especially difficult and should be rewarded accordingly.
 
-With the given formula, defending against all attackers becomes more econimical
+With the given formula, defending against all attackers becomes more economical
 than (but does not disincentivize) attacking once the number of attackers
-for a specific flagstore exceeds roughly one fourth the number of participating teams.
+for a specific flagstore exceeds roughly one-fourth the number of participating teams.
 
 
 ## Review
@@ -383,11 +383,11 @@ for a specific flagstore exceeds roughly one fourth the number of participating 
   assuming all other flagstores are patched, and that the minimum gain from
   the additional patched flagstore is `(teams - 2) * jeopardy(teams - 2)` per round,
   assuming all other teams apart from NOP have patched and are attacking.
-  The unrealistic scenarion aside (all teams only successfully attacking you in
+  The unrealistic scenario aside (all teams only successfully attacking you in
   a single flagstore while you are the only team to have all other flagstores patched),
-  the number of subsequent rounds rounds a team would have to be available
+  the number of subsequent rounds a team would have to be available
   for following 3 rounds of downtime is at most 60 rounds. This is a lot,
-  but would be far lower in practice - e.g. roughly one round if the other
+  but would be far lower in practice, e.g., roughly one round if the other
   flagstores are not earning defense points.
 
 ## Tenets
@@ -514,7 +514,7 @@ top of the scoreboard are closer together, which makes the game more exciting.
     Crucially, you do not gain defense points for any flag stores not retrievable
     in the round in which your service was down.
 
-??? question "Why are the defense points zero in the first round after our service is available if we didnt get exploited?"
+??? question "Why are the defense points zero in the first round after our service is available if we didn't get exploited?"
 
     The defense points may be zero in this round because no other team is
     attacking the flag store yet. Attackers typically rely on

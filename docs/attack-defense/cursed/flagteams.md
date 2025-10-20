@@ -11,6 +11,6 @@ flags from them during the CTF (after first-blood to avoid suspicion)
 without ever knowing how to exploit the service.
 
 Furthermore, to prevent other teams from exploiting their fake teams, they may
-use firewalls that filter outbound flags (or other filesystem based techniques).
+use firewalls that filter outbound flags (or other filesystem-based techniques).
 The services do not pass the SLA check, but the checker will still be able to
 deploy flags for the offending team to submit.

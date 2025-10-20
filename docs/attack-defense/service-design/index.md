@@ -1,6 +1,6 @@
 # Service Design
 
-Just a few key aspects can greatly impact player experience for an A/D service.
+Just a few key aspects can greatly impact the player experience for an A/D service.
 
 Based on our experience playing and hosting Attack-Defense competitions, we
 define [a set of minimum requirements](tenets.md) for evaluating A/D service

@@ -1,6 +1,6 @@
 # Attack-Defense Strategy
 
-This section outlines some strategies to playing A/D CTFs, ranked from least to most
+This section outlines some strategies for playing A/D CTFs, ranked from least to most
 advanced.
 
 
@@ -18,17 +18,17 @@ to help with this task.
 
 Because exploits deployed early can collect points over the entire CTF,
 taking a basic overview of each service and identifying *low-hanging fruit*
-before the network opens is essential. Moreover, found vulnerabilities can
+before the network opens is essential. Moreover, vulnerabilities found can
 be patched before other players have the chance to exploit them.
 
 
 ### Attack vs Defense
 
-Since most [scoring formulas](/attack-defense/scoring/index.md) favour attack over defense,
-players should prioritize writing exploits over patching, except in those case
-where writing the exploit is disproportionally difficult.
-Conversely, teams should prioritize implementing exploits which are easy to
-write, but difficult to patch.
+Since most [scoring formulas](/attack-defense/scoring/index.md) favor attack over defense,
+players should prioritize writing exploits over patching, except in those cases
+where writing the exploit is disproportionately difficult.
+Conversely, teams should prioritize implementing exploits that are easy to
+write but difficult to patch.
 
 
 ### Attack Replay & Obfuscation
@@ -36,14 +36,14 @@ write, but difficult to patch.
 Most exploits can be stolen by observing network traffic, and reversing an
 exploit this way is often easier than finding it yourself. Some
 [monitoring tools](attack-defense/paying/monitoring), notably
-[tulip](https://github.com/OpenAttackDefenseTools/tulip), will even automate
+[Tulip](https://github.com/OpenAttackDefenseTools/tulip), will even automate
 part of the process, providing a `Copy as Pwntools` button for generating
-python scripts using [pwntools](https://github.com/Gallopsled/pwntools)
+Python scripts using [pwntools](https://github.com/Gallopsled/pwntools)
 which mimic the recorded traffic.
 
 Because of this, it can pay off to obfuscate your exploit traffic,
-especially when the vulnerability is difficult to find and has not
-been exploited yet.
+especially when the vulnerability is difficult to find and has not yet
+been exploited.
 
 
 ### Checker Fingerprinting
@@ -52,10 +52,10 @@ Capturing game traffic directly after network open can help differentiate
 checker from exploit traffic at a later stage in the game. As long as the
 service is not immediately exploited, early-game traffic is less likely to
 originate from other players. This traffic capture may prove useful at a later
-stage of the game to differentiate checker- from exploit-traffic.
+stage of the game to differentiate checker from exploit traffic.
 
 If the checker behaves in a way that players can detect without being
-able to replicate it themselves (e.g. using a specific private key
+able to replicate it themselves (e.g., using a specific private key
 for a crypto service), it allows teams to build so-called **Superman-Defenses**,
 preventing any non-checker requests from reaching the service.
 
