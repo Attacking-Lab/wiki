@@ -357,3 +357,12 @@ article.md-content__inner {
 	background-color: var(--md-default-bg-color);
   color: white;
 }
+
+.md-source {
+	color: white;
+	fill: white;
+}
+
+.md-logo path {
+	fill: white;
+}
