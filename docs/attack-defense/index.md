@@ -29,7 +29,7 @@ every service. The amount of points earned is highest when the service is
 unexploited and decreases with the number of other teams exploiting it.
 
 These points combine to calculate the team score using a
-[scoring formula](scoring-formula/index.md), which can vary between CTFs.
+[scoring formula](scoring/index.md), which can vary between CTFs.
 
 Ultimately, there are 3 objectives each round to win the game:
 

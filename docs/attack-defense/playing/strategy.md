@@ -35,7 +35,7 @@ write but difficult to patch.
 
 Most exploits can be stolen by observing network traffic, and reversing an
 exploit this way is often easier than finding it yourself. Some
-[monitoring tools](attack-defense/paying/monitoring), notably
+[monitoring tools](/attack-defense/playing/monitoring), notably
 [Tulip](https://github.com/OpenAttackDefenseTools/tulip), will even automate
 part of the process, providing a `Copy as Pwntools` button for generating
 Python scripts using [pwntools](https://github.com/Gallopsled/pwntools)
