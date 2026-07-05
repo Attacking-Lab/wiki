@@ -127,7 +127,7 @@
 
 :root [data-md-color-scheme=slate] .md-nav__title {
 	color: var(--md-default-fg-color) !important;
-	background-color: var(--md-default-bg-color) !important;
+	background-color: var(--atklab-canvas) !important;
 }
 
 :root [data-md-color-scheme=slate] .md-nav__item {
@@ -154,7 +154,7 @@
 
 :root [data-md-color-scheme=slate] .md-search__form {
 	color: var(--md-primary-fg-color) !important;
-	background-color: var(--md-primary-bg-color--light) !important;
+	background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 :root [data-md-color-scheme=slate] .md-search-result__meta {
@@ -350,7 +350,7 @@ article.md-content__inner {
 }
 
 .md-header__topic:nth-child(2) {
-	font-weight: bold;
+	font-weight: 500;
 }
 
 #vg-tooltip-element {
@@ -365,4 +365,262 @@ article.md-content__inner {
 
 .md-logo path {
 	fill: white;
+}
+
+/* ============================================================
+ * Liquid-glass theme — mirrors https://attacking-lab.com
+ * ============================================================ */
+
+:root [data-md-color-scheme=slate] {
+	--atklab-canvas: #0a0a0a;
+	--atklab-canvas-soft: #0a0a0a;
+
+	--atklab-glass-bg: rgba(255, 255, 255, 0.03);
+	--atklab-glass-bg-hover: rgba(255, 255, 255, 0.05);
+	--atklab-glass-border: rgba(255, 255, 255, 0.08);
+	--atklab-glass-border-strong: rgba(255, 255, 255, 0.15);
+	--atklab-accent-line: rgba(187, 134, 252, 0.12);
+	--atklab-accent-line-strong: rgba(187, 134, 252, 0.35);
+	--atklab-accent-glow: rgba(187, 134, 252, 0.10);
+
+	--md-code-bg-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Pure-black canvas so glass panels float over it ------------- */
+[data-md-color-scheme=slate] html,
+[data-md-color-scheme=slate] .md-container,
+[data-md-color-scheme=slate] .md-main,
+[data-md-color-scheme=slate] .md-main__inner {
+	background-color: var(--atklab-canvas);
+}
+
+body[data-md-color-scheme=slate] {
+	background: #000 !important;
+}
+
+[data-md-color-scheme=slate] .md-content,
+[data-md-color-scheme=slate] .md-content__inner {
+	background-color: transparent;
+}
+
+/* Fixed glass header — verbatim from attacking-lab.com --------- */
+[data-md-color-scheme=slate] .md-header {
+	height: 60px;
+	background: rgba(10, 10, 10, 0.8) !important;
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(187, 134, 252, 0.12);
+	box-shadow: none;
+}
+
+[data-md-color-scheme=slate] .md-header__inner {
+	height: 60px;
+	padding: 0 0.4rem;
+}
+
+[data-md-color-scheme=slate] .md-header[data-md-state=shadow] {
+	box-shadow: none;
+}
+
+/* Logo + title — match attacking-lab.com sizing --------------- */
+[data-md-color-scheme=slate] .md-header__button.md-logo {
+	padding: 0.4rem;
+	margin: 0.2rem 0.4rem 0.2rem 0.2rem;
+}
+
+[data-md-color-scheme=slate] .md-header__button.md-logo svg,
+[data-md-color-scheme=slate] .md-header__button.md-logo img {
+	height: 30px;
+	width: auto;
+	margin-top: -3px;
+}
+
+[data-md-color-scheme=slate] .md-header__title {
+	font-size: 17.6px;
+	font-weight: 500;
+	height: 60px;
+	line-height: 60px;
+}
+
+[data-md-color-scheme=slate] .md-header__topic,
+[data-md-color-scheme=slate] .md-header__topic:nth-child(2) {
+	font-weight: 500;
+	top: 50%;
+	translate: 0 -50%;
+}
+
+/* Glass search bar -------------------------------------------- */
+[data-md-color-scheme=slate] .md-search__form {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: 1px solid var(--atklab-glass-border);
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+[data-md-color-scheme=slate] .md-search__form:hover,
+[data-md-color-scheme=slate] [data-md-toggle=search]:checked ~ .md-header .md-search__form {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border-color: var(--atklab-accent-line-strong);
+}
+
+[data-md-color-scheme=slate] .md-search__output {
+	background-color: rgba(10, 10, 10, 0.9);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-radius: 0 0 12px 12px;
+	border: 1px solid var(--atklab-glass-border);
+	border-top: none;
+}
+
+/* Sidebars — full-height, transparent so the black canvas shows */
+[data-md-color-scheme=slate] .md-sidebar,
+[data-md-color-scheme=slate] .md-sidebar__scrollwrap {
+	background-color: transparent;
+}
+
+[data-md-color-scheme=slate] .md-sidebar__scrollwrap,
+[data-md-color-scheme=slate] html {
+	scrollbar-color: rgba(255, 255, 255, 0.08) transparent !important;
+}
+
+[data-md-color-scheme=slate] ::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+[data-md-color-scheme=slate] ::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+[data-md-color-scheme=slate] ::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.08);
+	border-radius: 6px;
+}
+
+[data-md-color-scheme=slate] ::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.14);
+}
+
+[data-md-color-scheme=slate] .md-nav,
+[data-md-color-scheme=slate] .md-nav__item {
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+
+[data-md-color-scheme=slate] .md-nav__title,
+[data-md-color-scheme=slate] .md-nav--primary > .md-nav__title,
+[data-md-color-scheme=slate] .md-nav--secondary > .md-nav__title,
+[data-md-color-scheme=slate] .md-nav--primary .md-nav__title[for="__drawer"] {
+	background-color: var(--atklab-canvas) !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+
+[data-md-color-scheme=slate] .md-nav__link {
+	transition: color 0.15s ease;
+}
+
+[data-md-color-scheme=slate] .md-nav__link:hover,
+[data-md-color-scheme=slate] .md-nav__link:focus {
+	color: var(--md-accent-fg-color--dark);
+}
+
+[data-md-color-scheme=slate] .md-nav__link--active,
+[data-md-color-scheme=slate] .md-nav__link--active code {
+	color: var(--md-accent-fg-color--dark);
+}
+
+/* Rounded corners on code blocks ------------------------------- */
+[data-md-color-scheme=slate] .md-typeset code {
+	border-radius: 3px;
+}
+
+[data-md-color-scheme=slate] .md-typeset .highlight,
+[data-md-color-scheme=slate] .md-typeset pre,
+[data-md-color-scheme=slate] .md-typeset pre > code {
+	border-radius: 4px;
+}
+
+/* Glass admonitions & details --------------------------------- */
+[data-md-color-scheme=slate] .md-typeset .admonition,
+[data-md-color-scheme=slate] .md-typeset details {
+	background-color: var(--atklab-glass-bg) !important;
+	border-radius: 8px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+}
+
+[data-md-color-scheme=slate] .md-typeset details > summary,
+[data-md-color-scheme=slate] .md-typeset .admonition-title {
+	border-radius: 0;
+}
+
+/* Tables as glass panels -------------------------------------- */
+[data-md-color-scheme=slate] .md-typeset table:not([class]) {
+	background-color: var(--atklab-glass-bg);
+	border: 1px solid var(--atklab-glass-border);
+	border-radius: 12px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	overflow: hidden;
+}
+
+[data-md-color-scheme=slate] .md-typeset table:not([class]) th {
+	background-color: rgba(187, 134, 252, 0.08);
+	color: var(--md-primary-fg-color);
+	border-bottom: 1px solid var(--atklab-glass-border);
+}
+
+[data-md-color-scheme=slate] .md-typeset table:not([class]) tr:hover {
+	background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Footer -------------------------------------------------------- */
+[data-md-color-scheme=slate] .md-footer {
+	background-color: rgba(10, 10, 10, 0.72);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-top: 1px solid var(--atklab-glass-border);
+}
+
+[data-md-color-scheme=slate] .md-footer-meta {
+	background-color: transparent;
+}
+
+/* Content links — match attacking-lab.com underline style ------ */
+[data-md-color-scheme=slate] .md-content a:not(:has(a)):not(.glightbox):not(.headerlink) {
+	border-bottom: none;
+	color: var(--md-accent-fg-color);
+	text-decoration: underline;
+	text-decoration-color: rgba(187, 134, 252, 0.4);
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
+	transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+[data-md-color-scheme=slate] .md-content a:not(:has(a)):not(.glightbox):not(.headerlink):hover {
+	color: var(--md-accent-fg-color--dark);
+	text-decoration-color: var(--md-accent-fg-color--dark);
+}
+
+/* Table of contents (right sidebar) — active mark in accent ---- */
+[data-md-color-scheme=slate] .md-nav--secondary .md-nav__link--active {
+	color: var(--md-accent-fg-color--dark);
+	font-weight: 500;
+}
+
+/* Buttons (search reset/submit) become glass chips ------------- */
+[data-md-color-scheme=slate] .md-search__icon svg,
+[data-md-color-scheme=slate] .md-header__button svg {
+	opacity: 0.85;
+	transition: opacity 0.15s ease;
+}
+
+[data-md-color-scheme=slate] .md-header__button:hover svg,
+[data-md-color-scheme=slate] .md-search__icon:hover svg {
+	opacity: 1;
 }

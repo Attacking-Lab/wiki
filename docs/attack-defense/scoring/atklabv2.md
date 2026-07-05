@@ -96,7 +96,7 @@ When called with default parameters as `jeopardy(solves, 40)`, this results in t
     "x": {"field": "solves", "type": "nominal", "axis": {"labelAngle": 0}},
     "y": {"field": "points", "type": "quantitative"}
   },
-  "background": "#1f1f1f"
+  "background": "#0a0a0a"
 }
 ```
 
@@ -359,7 +359,7 @@ with default parameters, we would see the following `attack(..)` for *attackers*
     "y": {"field": "points", "type": "quantitative"},
     "color": {"field": "category", "type": "nominal", "scale": {"scheme": "set1"}}
   },
-  "background": "#1f1f1f"
+  "background": "#0a0a0a"
 }
 ```
 
@@ -394,7 +394,7 @@ profitable to the attacker.<br>This is still the case by design (showing defense
     "y": {"field": "points", "type": "quantitative"},
     "color": {"field": "category", "type": "nominal", "scale": {"scheme": "set1"}}
   },
-  "background": "#1f1f1f"
+  "background": "#0a0a0a"
 }
 ```
 
@@ -521,7 +521,7 @@ The following shows the top 5 teams for ECSC 2024:
     "y": {"field": "points", "type": "quantitative"},
     "color": {"field": "category", "type": "nominal", "scale": {"scheme": "dark2"}}
   },
-  "background": "#1f1f1f"
+  "background": "#0a0a0a"
 }
 ```
 
@@ -549,7 +549,7 @@ The following shows the top 5 teams for ECSC 2024:
     "y": {"field": "points", "type": "quantitative"},
     "color": {"field": "category", "type": "nominal", "scale": {"scheme": "set1"}}
   },
-  "background": "#1f1f1f"
+  "background": "#0a0a0a"
 }
 ```
 
