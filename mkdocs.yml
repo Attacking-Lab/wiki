@@ -8,7 +8,6 @@ theme:
   name: material
   logo: assets/logo.svg
   favicon: assets/favicon.svg
-  favicon_png: assets/favicon.png
   palette:
     scheme: slate
     primary: black
@@ -40,7 +39,6 @@ nav:
       - Pitfalls: attack-defense/service-design/pitfalls.md
     - Game Design:
       - Attack Info: attack-defense/game-design/attack-info.md
-      - Validity Period: attack-defense/game-design/validity-period.md
       - Recovery Period: attack-defense/game-design/recovery-period.md
       - Checker Hold: attack-defense/game-design/checker-hold.md
     - Scoring Formula:
@@ -54,6 +52,7 @@ nav:
       - ECSC 2025: attack-defense/scoring/ecsc2025.md
       - ATKLAB v1: attack-defense/scoring/atklabv1.md
       - ATKLAB v2: attack-defense/scoring/atklabv2.md
+      - Aggregated: attack-defense/scoring/aggregated.md
     - Cursed Tactics:
       - Disclaimer: attack-defense/cursed/index.md
       - Flag Farming: attack-defense/cursed/flag-farming.md

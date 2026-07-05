@@ -9,4 +9,4 @@ The most important steps to playing Attack-Defense CTFs are:
 Depending on what is provided by the organizers, you might
 have to host your own vulnbox.
 
-Basic [gameplay](/attack-defense/index.md#gameplay) knowledge is required for this section.
+Basic [gameplay](/attack-defense/index.md) knowledge is required for this section.
