@@ -349,10 +349,6 @@ article.md-content__inner {
 	color: #dddddd;
 }
 
-.md-header__topic:nth-child(2) {
-	font-weight: 500;
-}
-
 #vg-tooltip-element {
 	background-color: var(--md-default-bg-color);
   color: white;
@@ -437,14 +433,12 @@ body[data-md-color-scheme=slate] {
 
 [data-md-color-scheme=slate] .md-header__title {
 	font-size: 17.6px;
-	font-weight: 500;
 	height: 60px;
 	line-height: 60px;
 }
 
 [data-md-color-scheme=slate] .md-header__topic,
 [data-md-color-scheme=slate] .md-header__topic:nth-child(2) {
-	font-weight: 500;
 	top: 50%;
 	translate: 0 -50%;
 }
@@ -613,14 +607,3 @@ body[data-md-color-scheme=slate] {
 	font-weight: 500;
 }
 
-/* Buttons (search reset/submit) become glass chips ------------- */
-[data-md-color-scheme=slate] .md-search__icon svg,
-[data-md-color-scheme=slate] .md-header__button svg {
-	opacity: 0.85;
-	transition: opacity 0.15s ease;
-}
-
-[data-md-color-scheme=slate] .md-header__button:hover svg,
-[data-md-color-scheme=slate] .md-search__icon:hover svg {
-	opacity: 1;
-}
