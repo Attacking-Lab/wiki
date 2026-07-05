@@ -16,7 +16,7 @@ to specify scoring formula requirements.
 
 ## Evaluation
 
-=== "[FaustCTF 2024](../faust2024/)"
+=== "FaustCTF 2024"
 
     1. {{ tenet1_faust2024 }}
     2. {{ tenet2_faust2024 }}
@@ -26,7 +26,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_faust2024 }}
     7. {{ tenet7_faust2024 }}
 
-=== "[SaarCTF 2024](../saar2024/)"
+=== "SaarCTF 2024"
 
     1. {{ tenet1_saar2024 }}
     2. {{ tenet2_saar2024 }}
@@ -36,7 +36,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_saar2024 }}
     7. {{ tenet7_saar2024 }}
 
-=== "[ENOWARS 2024](../enowars2024/)"
+=== "ENOWARS 2024"
 
     1. {{ tenet1_enowars2024 }}
     2. {{ tenet2_enowars2024 }}
@@ -46,7 +46,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_enowars2024 }}
     7. {{ tenet7_enowars2024 }}
 
-=== "[ECSC 2023](../ecsc2023/)"
+=== "ECSC 2023"
 
     1. {{ tenet1_ecsc2023 }}
     2. {{ tenet2_ecsc2023 }}
@@ -56,7 +56,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_ecsc2023 }}
     7. {{ tenet7_ecsc2023 }}
 
-=== "[ECSC 2024](../ecsc2024/)"
+=== "ECSC 2024"
 
     1. {{ tenet1_ecsc2024 }}
     2. {{ tenet2_ecsc2024 }}
@@ -66,7 +66,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_ecsc2024 }}
     7. {{ tenet7_ecsc2024 }}
 
-=== "[ECSC 2025](../ecsc2025/)"
+=== "ECSC 2025"
 
     1. {{ tenet1_ecsc2025 }}
     2. {{ tenet2_ecsc2025 }}
@@ -76,7 +76,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_ecsc2025 }}
     7. {{ tenet7_ecsc2025 }}
 
-=== "[ATKLAB v1](../atklabv1/)"
+=== "ATKLAB v1"
 
     1. {{ tenet1_atklabv1 }}
     2. {{ tenet2_atklabv1 }}
@@ -86,7 +86,7 @@ to specify scoring formula requirements.
     6. {{ tenet6_atklabv1 }}
     7. {{ tenet7_atklabv1 }}
 
-=== "[ATKLAB v2](../atklabv2/)"
+=== "ATKLAB v2"
 
     1. {{ tenet1_atklabv2 }}
     2. {{ tenet2_atklabv2 }}
