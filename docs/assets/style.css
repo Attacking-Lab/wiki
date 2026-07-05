@@ -173,7 +173,7 @@
 }
 
 :root [data-md-color-scheme=slate] .md-content a:not(:has(a)):not(.glightbox) {
-	border-bottom: 1px dotted white;
+	border-bottom: none;
 }
 
 :root [data-md-color-scheme=slate] {
@@ -585,20 +585,16 @@ body[data-md-color-scheme=slate] {
 	background-color: transparent;
 }
 
-/* Content links — match attacking-lab.com underline style ------ */
+/* Content links --------------------------------------------------- */
 [data-md-color-scheme=slate] .md-content a:not(:has(a)):not(.glightbox):not(.headerlink) {
 	border-bottom: none;
 	color: var(--md-accent-fg-color);
-	text-decoration: underline;
-	text-decoration-color: rgba(187, 134, 252, 0.4);
-	text-underline-offset: 3px;
-	text-decoration-thickness: 1px;
-	transition: color 0.15s ease, text-decoration-color 0.15s ease;
+	text-decoration: none;
+	transition: color 0.15s ease;
 }
 
 [data-md-color-scheme=slate] .md-content a:not(:has(a)):not(.glightbox):not(.headerlink):hover {
 	color: var(--md-accent-fg-color--dark);
-	text-decoration-color: var(--md-accent-fg-color--dark);
 }
 
 /* Table of contents (right sidebar) — active mark in accent ---- */
